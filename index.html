@@ -125,10 +125,8 @@ header{display:grid;grid-template-columns:1fr 1fr;height:66px;border-bottom:1px 
       <button class="nbtn" onclick="volverInicio()" title="Elegir otro modo">&#8592; Cambiar modo</button>
     </div>
   </div>
-</div>
 
-<div style="background:#C87010;color:#fff;text-align:center;padding:6px 12px;font-family:DM Sans,sans-serif;font-size:.75rem;letter-spacing:.08em;font-weight:500">
-  &#127381; MODO PRUEBA PARA PÍA &mdash; Uso libre &mdash; Las sesiones no son registradas ni enviadas
+<div style="background:#C87010;color:#fff;text-align:center;padding:5px 12px;font-family:'DM Sans',sans-serif;font-size:.73rem;font-weight:600;letter-spacing:.06em">&#127381; MODO PRUEBA PARA PÍA — Uso libre — Las sesiones no son registradas ni enviadas</div>
 </div>
 <div id="ma">
   <div id="dp">
@@ -143,7 +141,7 @@ header{display:grid;grid-template-columns:1fr 1fr;height:66px;border-bottom:1px 
         <textárea id="mi" rows="1" placeholder="Consulta sobre bioética, presenta un caso o solicita una deliberación..."></textárea>
         <button id="sb" onclick="enviar()"><svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg></button>
       </div>
-      <p class="disc">BioBot orienta y delibera; no sustituye el juicio de especialistas ni de comités de etica &mdash; CIEPE / USS 2026</p>
+      <p class="disc">BioBot orienta y delibera; no sustituye el juicio de especialistas ni de comités de ética &mdash; CIEPE / USS 2026</p>
     </div>
   </div>
 </div>
@@ -151,7 +149,7 @@ header{display:grid;grid-template-columns:1fr 1fr;height:66px;border-bottom:1px 
 <div class="mo show" id="pm">
   <div class="mb">
     <h2>Bienvenido/a a BioBot</h2>
-    <p class="ms">Asistente especializado en Bioética y Métodos Deliberativos &mdash; CIEPE / USS<br/>Completa tu perfil para personalizar la sesión y colaborar con la investigación.</p>
+    <p class="ms">Asistente especializado en Bioética y Métodos Deliberativos &mdash; CIEPE / USS<br/>Completá tu perfil para personalizar la sesión y colaborar con la investigación.</p>
     <div class="fg"><label>Institución (opcional)</label><input type="text" id="pi" placeholder="Ej: Universidad San Sebastian"/></div>
     <div class="fg"><label>Perfil profesional</label><select id="pp"><option value="">Seleccióna...</option><option>Estudiante de medicina</option><option>Estudiante de otras carreras de salud</option><option>Estudiante de otras carreras</option><option>Profesional de la salud</option><option>Académico / investigador</option><option>Miembro de comité de etica</option><option>Otro</option></select></div>
     <div class="fg"><label>Nivel de familiaridad con bioética</label><select id="pn"><option value="">Seleccióna...</option><option>Básico</option><option>Intermedio</option><option>Avanzado</option></select></div>
@@ -173,15 +171,15 @@ header{display:grid;grid-template-columns:1fr 1fr;height:66px;border-bottom:1px 
     <div class="sq"><label>Pertinencia y rigor técnico de las respuestas</label><div class="stars" id="s1"></div></div>
     <div class="sq"><label>Claridad y utilidad del método deliberativo</label><div class="stars" id="s2"></div></div>
     <div class="sq"><label>Nivel técnico adecuado a tu perfil</label><div class="stars" id="s3"></div></div>
-    <div class="sq"><label>¿Qué mejorías sugerís? (opcional)</label><textárea id="sm" placeholder="Escribe aqui..."></textárea></div>
-    <div class="sq"><label>¿Recomendarías BioBot a colegas?</label><select id="sr" style="width:100%;padding:9px 12px;border:1.5px solid var(--border);border-radius:8px;background:var(--cream);font-family:DM Sans,sans-serif;font-size:.83rem;outline:none;-webkit-appearance:none"><option value="">-</option><option>Si, definitivamente</option><option>Probablemente si</option><option>No estoy seguro/a</option><option>Probablemente no</option></select></div>
+    <div class="sq"><label>Que mejorias sugeris? (opcional)</label><textárea id="sm" placeholder="Escribe aqui..."></textárea></div>
+    <div class="sq"><label>Recomendarias BioBot a colegas?</label><select id="sr" style="width:100%;padding:9px 12px;border:1.5px solid var(--border);border-radius:8px;background:var(--cream);font-family:DM Sans,sans-serif;font-size:.83rem;outline:none;-webkit-appearance:none"><option value="">-</option><option>Si, definitivamente</option><option>Probablemente si</option><option>No estoy seguro/a</option><option>Probablemente no</option></select></div>
     <button class="bp" onclick="enviarEncuesta()">Enviar evaluación</button>
     <button class="bs" onclick="cerrarQ()">Omitir</button>
   </div>
 </div>
 <script>
 var AK='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';
-var FSURL=''; // Deshabilitado en modo prueba
+var FSURL='';
 var modo='libre',paso=0,hist=[],rat={1:0,2:0,3:0},perf={},nInter=0;
 var ses={id:'BB-'+Date.now(),ini:new Date().toISOString(),modo:'',perf:{},msgs:[],enc:null};
 var PASOS=[{n:1,l:'Datos clínicos y contextuales'},{n:2,l:'Mapeo de valores y actores'},{n:3,l:'Conflicto central de valores'},{n:4,l:'Cursos de accion posibles'},{n:5,l:'Selección fundamentada'},{n:6,l:'Justificacion sostenible'}];
@@ -246,7 +244,7 @@ function iniciarSesión(){
     paso=1; renderPanel(); activarP(['a','b','n','j']);
   }
   var bv={
-    libre:'Sesión iniciada. Soy **BioBot**, desarrollado por CIEPE y la Universidad San Sebastian.\n\nModalidad de **Consulta Libre**. Consultá sobre principios bioéticos, dilemas clínicos, etica de la investigación, marcos normativos o métodologia deliberativa.',
+    libre:'Sesión iniciada. Soy **BioBot**, desarrollado por CIEPE y la Universidad San Sebastian.\n\nModalidad de **Consulta Libre**. Consulta sobre principios bioeticos, dilemas clínicos, ética de la investigación, marcos normativos o métodologia deliberativa.',
     guiada:'Sesión de **Deliberación Guiada** iniciada. El panel lateral registra el proceso.\n\n[PASO 1 - Descripcion de datos clínicos y contextuales]\nDescribi el caso: historia clínica, diagnostico, tratamientos en juego y contexto instituciónal.',
     caso:'**Análisis de Caso** iniciado. Aplicare el modelo deliberativo de 6 pasos (Bustamante-Chuecas) y las **4 Cajas de Jonsen, Siegler y Winslade** (Clínical Ethics, 2015).\n\nPresenta el caso con el mayor detalle posible.'
   };
@@ -276,7 +274,7 @@ function getSys(){
     +'PASO 4: Exploracion exhaustiva de cursos de accion. Para cada opcion: que valores protege, cuales sacrifica, si es permisible tolerable u optima.\n'
     +'PASO 5: Eleccion de la opcion mas razonable desde la phronesis aristotelica.\n'
     +'PASO 6: Fundamentacion sostenible ante escrutinio intersubjetivo. Anticipacion y respuesta de objeciones.\n\n'
-    +'4 CAJAS JONSEN-SIEGLER-WINSLADE: Indicaciones médicas, Preferencias del paciente, Calidad de vida, Aspectos contextuales. Aplicación simultanea no secuencial.\n\n'
+    +'4 CAJAS JONSEN-SIEGLER-WINSLADE: Indicaciones médicas, Preferencias del paciente, Calidad de vida, Aspectos contextuales. Aplicacion simultanea no secuencial.\n\n'
     +'PRINCIPIOS: AUTONOMIA: autogobierno racional + autonomia relacional (Mackenzie y Stoljar). Condiciones de validez del consentimiento: competencia información comprension voluntariedad. BENEFICENCIA: tension con autonomia; paternalismo soft vs hard (Pellegrino). NO MALEFICENCIA: principio del doble efecto (Aquino/Beauchamp): accion no intrinsecamente mala, efecto malo no intentado, no es medio para el bueno, proporcion de efectos. JUSTICIA: igualitarismo, utilitarismo, libertarismo (Nozick), rawlsianismo (maximin), capacitismo (Sen y Nussbaum).\n\n'
     +'BIOETICA LATINOAMERICANA: Bioética de intervencion (Garrafa y Porto 2003): prioriza el polo mas vulnerable y las necesidades colectivas sobre las individuales. Critica epistemica al principialismo anglosajonal como imperialismo etico. Fernando Lolas: bioética como diálogo interdisciplinar. Miguel Kottow: vulnerabilidad ontologica como categoria central.';
 }
@@ -394,7 +392,7 @@ async function enviarEncuesta(){
   };
   ses.enc=dat; cerrarQ();
   try{
-    if(!FSURL){addMsg('bot','[MODO PRUEBA] Evaluación registrada localmente. En produccion se enviaria al equipo de investigación.');return;}
+    if(!FSURL){addMsg('bot','[MODO PRUEBA] Evaluación registrada. En producción se enviaría al equipo de investigación.');return;}
     var r=await fetch(FSURL,{
       method:'POST',
       headers:{'Content-Type':'application/json','Accept':'application/json'},
